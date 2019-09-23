@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on wanzaiwharf</title>
+    <link>https://wanzaiwharf.github.io/about/</link>
+    <description>Recent content in Abouts on wanzaiwharf</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    <lastBuildDate>Mon, 23 Sep 2019 15:39:17 +0800</lastBuildDate>
+    
+	<atom:link href="https://wanzaiwharf.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://wanzaiwharf.github.io/about/about/</link>
+      <pubDate>Mon, 23 Sep 2019 15:39:17 +0800</pubDate>
+      
+      <guid>https://wanzaiwharf.github.io/about/about/</guid>
+      <description>为什么有这个blog 记录生活 分享经历 寻求同好 重塑自我</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://wanzaiwharf.github.io/post/</loc>
+    <lastmod>2019-09-23T15:41:53+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wanzaiwharf.github.io/post/test/</loc>
+    <lastmod>2019-09-23T15:41:53+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wanzaiwharf.github.io/</loc>
+    <lastmod>2019-09-23T15:41:53+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wanzaiwharf.github.io/about/about/</loc>
+    <lastmod>2019-09-23T15:39:17+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wanzaiwharf.github.io/about/</loc>
+    <lastmod>2019-09-23T15:39:17+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wanzaiwharf.github.io/categories/</loc>
   </url>
   
@@ -12,10 +37,6 @@
   
   <url>
     <loc>https://wanzaiwharf.github.io/tags/</loc>
-  </url>
-  
-  <url>
-    <loc>https://wanzaiwharf.github.io/</loc>
   </url>
   
 </urlset>
