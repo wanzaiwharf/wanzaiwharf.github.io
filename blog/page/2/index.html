@@ -316,8 +316,8 @@
         <a href="https://wanzaiwharf.github.io/blog/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
     </li>
     
-    <li class="page-item disabled">
-    <a  class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    <li class="page-item">
+    <a href="https://wanzaiwharf.github.io/blog/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
     </li>
     
     
@@ -330,7 +330,7 @@
         
     
     
-    <li class="page-item active"><a class="page-link" href="https://wanzaiwharf.github.io/blog/">1</a></li>
+    <li class="page-item"><a class="page-link" href="https://wanzaiwharf.github.io/blog/">1</a></li>
     
     
     
@@ -341,11 +341,11 @@
         
     
     
-    <li class="page-item"><a class="page-link" href="https://wanzaiwharf.github.io/blog/page/2/">2</a></li>
+    <li class="page-item active"><a class="page-link" href="https://wanzaiwharf.github.io/blog/page/2/">2</a></li>
     
     
-    <li class="page-item">
-    <a href="https://wanzaiwharf.github.io/blog/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    <li class="page-item disabled">
+    <a  class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
     </li>
     
     <li class="page-item">
@@ -360,48 +360,9 @@
           
               <div class="post-wrapper white-bg post-card">
   
-  <a href="https://wanzaiwharf.github.io/blog/2019-09/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%AC%AC%E5%9B%9B%E5%91%A8%E6%95%B4%E7%90%86/">
+  <a href="https://wanzaiwharf.github.io/blog/2019-09/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
     <div class="post-header text-center">
-      <div class="px-4 post-heading">[C语言学习笔记——第四周整理]</div>
-      <ul class="post-meta li-x mt-1">
-        
-          <li>Sep 23, 2019</li>
-        
-    
-        
-          <li class="middot"></li>
-          <li>4 minutes read</li>
-        
-      </ul>
-    </div>
-    
-
-    
-      第三周放中秋假停课 课后习题 第一题 输入一串字符，并进行回显 #include&lt;stdio.h&gt; int main() { int c; c=getchar();//getchar 读取键盘输入并将读取到的值放入变量中 while(c!=EOF) { putchar(c);//循环中的结束条件EOF表示ctrl&#43;d或回车 c=getchar(); } return 0; } 第二题 统计键盘上键入的字符的个数 #include&lt;stdio.h&gt; int main() { long nc; int c; nc=0; c=getchar(); while(c!=EOF) { &#43;&#43;nc;//表示nc加1 c=getchar(); } printf(&#34;\nthe totoal number:%ld\n&#34;,nc); return 0; } 第三题 统计键盘输入时输入中行的个数 #include&lt;stdio.h&gt; int main() { int nl,c; nl=0; while((c=getchar())!=EOF) { if(c==&#39;\n&#39;)//&#39;a&#39;:表示1个常量，常量值为a字......
-    
-  </a>
-
-  
-  
-  <div class="post-meta li-x mt-2 div-x">
-    <div>
-      
-      
-    </div>
-   
-    <div>
-      
-    </div>
-  </div>
-
-</div>
-
-          
-              <div class="post-wrapper white-bg post-card">
-  
-  <a href="https://wanzaiwharf.github.io/blog/2019-09/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%8C%E5%91%A8%E6%95%B4%E7%90%86/">
-    <div class="post-header text-center">
-      <div class="px-4 post-heading">[C语言学习笔记——第二周整理]</div>
+      <div class="px-4 post-heading">C语言学习笔记</div>
       <ul class="post-meta li-x mt-1">
         
           <li>Sep 23, 2019</li>
@@ -416,46 +377,7 @@
     
 
     
-      课后作业 第一题 计算1到5的乘积，即5的阶乘 #include&lt;stdio.h&gt; int main() { int product; product=1*2*3*4*5; printf(&#34;The product from 1 to 5 is %d&#34;,product); return 0; } 第二题 手动输入n，然后计算从1依次相乘到n的乘积 #include&lt;stdio.h&gt; int main() { int prod(int n); int product; int n; scanf(&#34;%d&#34;,&amp;n); product=prod(n); printf(&#34;The product from 1 to %d is %d\n&#34;,n,product); return 0; } int prod(int n) { int p,i; p=1; i=1; do{ p=p*i; i=i&#43;1; }while(i&lt;=n);//do while循环 return p; } 第三题 在第二题的基础上更改程序，使其能计算从1到n的奇数依次相乘的乘积 #include&lt;stdio.h&gt; int main() { int prod(int n); int product; int n; scanf(&#34;%d&#34;,&amp;n); product=prod(n); printf(&#34;The product from 1 to %d is %d\n&#34;,n,product); return 0; } int prod(int n) { int p,i; p=1; i=1; do{ p=p*i; i=i&#43;2;//改一个加2即可，主要需要熟练......
-    
-  </a>
-
-  
-  
-  <div class="post-meta li-x mt-2 div-x">
-    <div>
-      
-      
-    </div>
-   
-    <div>
-      
-    </div>
-  </div>
-
-</div>
-
-          
-              <div class="post-wrapper white-bg post-card">
-  
-  <a href="https://wanzaiwharf.github.io/blog/2019-09/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%80%E5%91%A8%E6%95%B4%E7%90%86/">
-    <div class="post-header text-center">
-      <div class="px-4 post-heading">[C语言学习笔记——第一周整理]</div>
-      <ul class="post-meta li-x mt-1">
-        
-          <li>Sep 23, 2019</li>
-        
-    
-        
-          <li class="middot"></li>
-          <li>One minute read</li>
-        
-      </ul>
-    </div>
-    
-
-    
-      课后作业 第一题 所有初学者第一次遇见的程序，print “hello world!” #include&lt;stdio.h&gt; int main() { printf(&#34;hello world\n&#34;); return 0; } 第二题 给定数值的加法运算 #include&lt;stdio.h&gt; int main() { int a,b,sum;//int 变量定义，int定义一个整型 a=123; b=456; sum=a&#43;b; printf(&#34;Sum is %d\n&#34;,sum); return 0; } 第三题 键盘输入两个整数，比大小 #include&lt;stdio.h&gt; int a,b,c; int main() { int max(int x,int y); scanf(&#34;%d%d&#34;,&amp;b,&amp;a);//scanf 扫描输入，%d 对应int定义的整型 c=max(a,b); printf(&#34;max=%d\n&#34;,c); return 0; } int max(int x,int y)//在主函数外定义一个函数 { int z; if(x&gt;y) z=x; else z=y; return z;//返回值的问题 } 习题课作业 安装虚拟机（本人自用manjaro发行版系统实体机），完成课上例......
+      C语言学习整理 [C语言学习笔记]——此前缀用于标记和C语言学习相关的博文。 学习笔记中均使用linux C编程，gcc编译，gdb调试。......
     
   </a>
 
