@@ -6,10 +6,19 @@
     <description>Recent content in Blogs on wanzaiwharf</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
-    <lastBuildDate>Mon, 23 Sep 2019 15:41:53 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 23 Sep 2019 16:10:02 +0800</lastBuildDate>
     
 	<atom:link href="https://wanzaiwharf.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Step_of_uploading_blog</title>
+      <link>https://wanzaiwharf.github.io/blog/2019-09/step_of_uploading_blog/</link>
+      <pubDate>Mon, 23 Sep 2019 16:10:02 +0800</pubDate>
+      
+      <guid>https://wanzaiwharf.github.io/blog/2019-09/step_of_uploading_blog/</guid>
+      <description>上传步骤 记性不好，把命令打出来记一下,有错勿喷 😄 $ hugo --theme=AllinOne --buildDrafts --baseUrl=&amp;quot;https://wanzaiwharf.github.io/&amp;quot; //在本地初始化静态博客 $ cd public //文件夹刷新，进入编辑 $ git init //初始化远程仓库 $ git remote add origin https://github.com/wanzaiwharf/wanzaiwharf.github.io.git //匹配源，可不做 $ git add -A $ git commit -m &amp;quot;...&amp;quot; $ git push -u origin master //push</description>
+    </item>
     
     <item>
       <title>Test</title>
