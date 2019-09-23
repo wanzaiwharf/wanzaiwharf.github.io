@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>wanzaiwharf</title>
-    <link>https://wanzaiwharf.github.io/</link>
-    <description>Recent content on wanzaiwharf</description>
+    <title>Blogs on wanzaiwharf</title>
+    <link>https://wanzaiwharf.github.io/blog/</link>
+    <description>Recent content in Blogs on wanzaiwharf</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
     <lastBuildDate>Mon, 23 Sep 2019 15:41:53 +0800</lastBuildDate>
     
-	<atom:link href="https://wanzaiwharf.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://wanzaiwharf.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://wanzaiwharf.github.io/blog/2019-09/test/</guid>
       <description>测试文档 代码块 #include&amp;lt;stdio.h&amp;gt; int main() { printf(&amp;quot;hello,world!\n&amp;quot;); return 0; } 数学公式 $$ e^3+lg1000 $$ 图片插入</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://wanzaiwharf.github.io/about/about/</link>
-      <pubDate>Mon, 23 Sep 2019 15:39:17 +0800</pubDate>
-      
-      <guid>https://wanzaiwharf.github.io/about/about/</guid>
-      <description>为什么有这个blog 记录生活 分享经历 寻求同好 重塑自我</description>
     </item>
     
   </channel>
