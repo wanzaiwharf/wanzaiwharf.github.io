@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="zn-Hans">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="wanzaiwharf">
+  <meta name="description" content="title: &ldquo;[C语言学习笔记-第七周整理]&rdquo; date: 2019-10-19T10:04:42&#43;08:00 draft: true toc: true
+第一题 ex_13.c 将字符串s[]中的与c变量相同字符删除
+#include&lt;stdio.h&gt; void squeeze(char s[],int c); int main() { char str[]=&quot;Hello world!\n&quot;; int c=&#39;o&#39;; squeeze(str,c); printf(&quot;%s&quot;,str); return 0; } void squeeze(char s[],int c) { int i,j; for(i=j=0;s[i]=&#39;\0&#39;;i&#43;&#43;) if(s[i]!=c) s[j&#43;&#43;]=s[i]; s[j]=&#39;\0&#39;; }  第二题 ex_14.c strcat函数
+#include&lt;stdio.h&gt; #define MAXLEN 100 int main() { void mystrcat(char[],char[]); char s[MAXLEN]=&quot;Hello&quot;; char t[]=&quot; world!&quot;; mystrcat(s,t); printf(&quot;s=%s\n&quot;,s); return 0; } void mystrcat(char s[],char t[]) { int i,j; i=j=0; while(s[i]!=&#39;\0&#39;) i&#43;&#43;; while((s[i&#43;&#43;]=t[j&#43;&#43;])!=&#39;\0&#39;) ; }  第三题 ex_15.c getbits（int x, int p, int n)
+#include&lt;stdio.h&gt; unsigned getbits(unsigned, int, int); int main() { int b,a=0x56674; b=getbits(a,5,2); printf(&quot;b=%x\n&quot;,b); return 0; } unsigned getbits(unsigned x,int p,int n) { return(x&gt;&gt;(p&#43;1-n))&amp;~(~0 &lt;&lt;n); }  第四题 ex_16.c 统计变量x中1的个数
+#include&lt;stdio.h&gt; unsigned bitcount(unsigned); int main() { int a=0x56674,b; b=bitcount(a); printf(&quot;b=%d\n&quot;,b); return 0; } unsigned bitcount(unsigned x) { int b; for(b=0;x!=0;x&gt;&gt;=1) if(x&amp;01) &#43;&#43;b; return b; }  第五题 ex_17.c 输出自然数，每10个换一次行
+#include&lt;stdio.h&gt; #define N 123 int main() { int i; for(i=0;i&lt;N;i&#43;&#43;) printf(&quot;%6d%c&quot;,i,(i%10==9||i==N-1)?&#39;\n&#39;:&#39; &#39;); return 0; }  第六题 ex_18.c 名词的单复数
+#include&lt;stdio.h&gt; #define N 5 int main() { int i; for(i=1;i&lt;N;i&#43;&#43;) printf(&quot;You have %d item%s. \n&quot;,i,(i==1)?&quot;&quot;:&quot;s&quot;); return 0; }  第七题 ex1_statement.c
+#include&lt;stdio.h&gt; int main() { int a,b,c; 1; a; a&#43;b; a&#43;=c; a&#43;&#43;; a,b,c; ; a&#43;=a,b,c&#43;&#43;; printf(&quot;a=%d b=%d c=%d\n&quot;,a,b,c); return 0; }  第八题 ex2.">
+  
+  <meta property="og:title" content="" />
+<meta property="og:description" content="title: &ldquo;[C语言学习笔记-第七周整理]&rdquo; date: 2019-10-19T10:04:42&#43;08:00 draft: true toc: true
+第一题 ex_13.c 将字符串s[]中的与c变量相同字符删除
+#include&lt;stdio.h&gt; void squeeze(char s[],int c); int main() { char str[]=&quot;Hello world!\n&quot;; int c=&#39;o&#39;; squeeze(str,c); printf(&quot;%s&quot;,str); return 0; } void squeeze(char s[],int c) { int i,j; for(i=j=0;s[i]=&#39;\0&#39;;i&#43;&#43;) if(s[i]!=c) s[j&#43;&#43;]=s[i]; s[j]=&#39;\0&#39;; }  第二题 ex_14.c strcat函数
+#include&lt;stdio.h&gt; #define MAXLEN 100 int main() { void mystrcat(char[],char[]); char s[MAXLEN]=&quot;Hello&quot;; char t[]=&quot; world!&quot;; mystrcat(s,t); printf(&quot;s=%s\n&quot;,s); return 0; } void mystrcat(char s[],char t[]) { int i,j; i=j=0; while(s[i]!=&#39;\0&#39;) i&#43;&#43;; while((s[i&#43;&#43;]=t[j&#43;&#43;])!=&#39;\0&#39;) ; }  第三题 ex_15.c getbits（int x, int p, int n)
+#include&lt;stdio.h&gt; unsigned getbits(unsigned, int, int); int main() { int b,a=0x56674; b=getbits(a,5,2); printf(&quot;b=%x\n&quot;,b); return 0; } unsigned getbits(unsigned x,int p,int n) { return(x&gt;&gt;(p&#43;1-n))&amp;~(~0 &lt;&lt;n); }  第四题 ex_16.c 统计变量x中1的个数
+#include&lt;stdio.h&gt; unsigned bitcount(unsigned); int main() { int a=0x56674,b; b=bitcount(a); printf(&quot;b=%d\n&quot;,b); return 0; } unsigned bitcount(unsigned x) { int b; for(b=0;x!=0;x&gt;&gt;=1) if(x&amp;01) &#43;&#43;b; return b; }  第五题 ex_17.c 输出自然数，每10个换一次行
+#include&lt;stdio.h&gt; #define N 123 int main() { int i; for(i=0;i&lt;N;i&#43;&#43;) printf(&quot;%6d%c&quot;,i,(i%10==9||i==N-1)?&#39;\n&#39;:&#39; &#39;); return 0; }  第六题 ex_18.c 名词的单复数
+#include&lt;stdio.h&gt; #define N 5 int main() { int i; for(i=1;i&lt;N;i&#43;&#43;) printf(&quot;You have %d item%s. \n&quot;,i,(i==1)?&quot;&quot;:&quot;s&quot;); return 0; }  第七题 ex1_statement.c
+#include&lt;stdio.h&gt; int main() { int a,b,c; 1; a; a&#43;b; a&#43;=c; a&#43;&#43;; a,b,c; ; a&#43;=a,b,c&#43;&#43;; printf(&quot;a=%d b=%d c=%d\n&quot;,a,b,c); return 0; }  第八题 ex2." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wanzaiwharf.github.io/blog/1-01/" />
+
+
+
+  <title>
+  
+        | wanzaiwharf 
+  
+  </title>
+
+  <link rel="canonical" href="https://wanzaiwharf.github.io/blog/1-01/">
+
+  
+  
+
+  
+  <link href="https://wanzaiwharf.github.io/css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="https://wanzaiwharf.github.io/css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="https://wanzaiwharf.github.io/css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="https://wanzaiwharf.github.io/css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="https://wanzaiwharf.github.io/css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="https://wanzaiwharf.github.io/css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+  
+      href="https://wanzaiwharf.github.io/img/%E5%AD%97.png"
+  
+  >
+
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+    
+    <link rel="stylesheet" href="https://wanzaiwharf.github.io/js/vendors/katex/katex.min.css">
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="https://wanzaiwharf.github.io/css/vendors/highlight/github-gist.css">
+  
+
+</head>
+
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
+
+    
+      
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="https://wanzaiwharf.github.io/">
+          
+        <img class="avatar" src="https://wanzaiwharf.github.io/img/%E5%AD%97.png" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        
+        <strong> wanzaiwharf</strong>
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://wanzaiwharf.github.io/">Home</a>
+          </li>
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://wanzaiwharf.github.io/blog/" >Blog  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://wanzaiwharf.github.io/moment/" >Moment  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://wanzaiwharf.github.io/about/" >About  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+ 
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('https://wanzaiwharf.github.io/img/header-slides/555116.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://wanzaiwharf.github.io/img/header-slides//warma.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://wanzaiwharf.github.io/img/header-slides//%e5%a5%88%e5%a5%88%e5%8d%8e%e5%90%8c%e5%bf%97.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="https://wanzaiwharf.github.io/">
+          
+            <img class="pull-right avatar avatar-md" src="https://wanzaiwharf.github.io/img/%E5%A4%B4%E5%83%8F%E6%96%B9%E5%BD%A2.jpg" alt="" >
+          
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="https://wanzaiwharf.github.io/">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>wanzaiwharf</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+              <a href="//github.com/wanzaiwharf" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>    
+            
+            
+
+            
+
+            
+
+            
+
+            
+    
+            
+    
+        
+            
+                <a href="mailto:wanzaiwharf@gmail.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="container pr-5">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+    
+  </ul>
+
+  <div class="px-4 post-heading"></div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>Jan 1, 0001</li>
+    
+
+    
+      <li class="middot"></li>
+      <li>3 minutes read</li>
+    
+  </ul>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            
+
+<p>title: &ldquo;[C语言学习笔记-第七周整理]&rdquo;
+date: 2019-10-19T10:04:42+08:00
+draft: true
+toc: true</p>
+
+<h2 id="第一题">第一题</h2>
+
+<p>ex_13.c 将字符串s[]中的与c变量相同字符删除</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+void squeeze(char s[],int c);
+
+int main()
+{
+    char str[]=&quot;Hello world!\n&quot;;
+    int c='o';
+    squeeze(str,c);
+    printf(&quot;%s&quot;,str);
+    return 0;
+}
+
+void squeeze(char s[],int c)
+{
+    int i,j;
+    for(i=j=0;s[i]='\0';i++)
+        if(s[i]!=c)
+            s[j++]=s[i];
+    s[j]='\0';
+}
+</code></pre>
+
+<h2 id="第二题">第二题</h2>
+
+<p>ex_14.c strcat函数</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+#define MAXLEN 100
+
+int main()
+{
+    void mystrcat(char[],char[]);
+    char s[MAXLEN]=&quot;Hello&quot;;
+    char t[]=&quot; world!&quot;;
+    mystrcat(s,t);
+    printf(&quot;s=%s\n&quot;,s);
+    return 0;
+}
+
+void mystrcat(char s[],char t[])
+{
+    int i,j;
+    i=j=0;
+    while(s[i]!='\0')
+        i++;
+    while((s[i++]=t[j++])!='\0')
+        ;
+}
+</code></pre>
+
+<h2 id="第三题">第三题</h2>
+
+<p>ex_15.c getbits（int x, int p, int n)</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+unsigned getbits(unsigned, int, int);
+
+int main()
+{
+    int b,a=0x56674;
+    b=getbits(a,5,2);
+    printf(&quot;b=%x\n&quot;,b);
+    return 0;
+}
+
+unsigned getbits(unsigned x,int p,int n)
+{
+    return(x&gt;&gt;(p+1-n))&amp;~(~0 &lt;&lt;n);
+}
+</code></pre>
+
+<h2 id="第四题">第四题</h2>
+
+<p>ex_16.c 统计变量x中1的个数</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+unsigned bitcount(unsigned);
+
+int main()
+{
+    int a=0x56674,b;
+    b=bitcount(a);
+    printf(&quot;b=%d\n&quot;,b);
+    return 0;
+}
+
+unsigned bitcount(unsigned x)
+{
+    int b;
+    for(b=0;x!=0;x&gt;&gt;=1)
+        if(x&amp;01)
+            ++b;
+    return b;
+}
+</code></pre>
+
+<h2 id="第五题">第五题</h2>
+
+<p>ex_17.c 输出自然数，每10个换一次行</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+#define N 123
+
+int main()
+{
+    int i;
+    for(i=0;i&lt;N;i++)
+        printf(&quot;%6d%c&quot;,i,(i%10==9||i==N-1)?'\n':' ');
+    return 0;
+}
+</code></pre>
+
+<h2 id="第六题">第六题</h2>
+
+<p>ex_18.c 名词的单复数</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+#define N 5
+
+int main()
+{
+    int i;
+    for(i=1;i&lt;N;i++)
+        printf(&quot;You have %d item%s. \n&quot;,i,(i==1)?&quot;&quot;:&quot;s&quot;);
+    return 0;
+}
+</code></pre>
+
+<h2 id="第七题">第七题</h2>
+
+<p>ex1_statement.c</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int a,b,c;
+    1;
+    a;
+    a+b;
+    a+=c;
+    a++;
+    a,b,c;
+    ;
+    a+=a,b,c++;
+    printf(&quot;a=%d b=%d c=%d\n&quot;,a,b,c);
+    return 0;
+}
+</code></pre>
+
+<h2 id="第八题">第八题</h2>
+
+<p>ex2.c</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int a,b,c;
+    a=b=5;
+    c=a++,a+b,b+=3;
+    printf(&quot;a=%d b=%d c=%d\n&quot;,a,b,c);
+    a=b=5;
+    c=(a++,a+b,b+=3);
+    printf(&quot;a=%d b=%d c=%d\n&quot;,a,b,c);
+    return 0;
+}
+</code></pre>
+
+<h2 id="第九题">第九题</h2>
+
+<p>ex3.c 与程序员意愿不⼀致的if…else匹配</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int n=10;
+    int a=5;
+    int i;
+    if(n&gt;0)
+        for(i=0;i&lt;n;i++)
+            if(a&gt;i)
+                printf(&quot;a=%d, i=%d, and a&gt;i\n&quot;,a,i);
+    else
+        printf(&quot;erreo:n&lt;0\n&quot;);
+    return 0;
+}
+</code></pre>
+
+<h2 id="第十题">第十题</h2>
+
+<p>ex4.c else if简单示例</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int a=10;
+    if(a&gt;5)
+        printf(&quot;a&gt;5\n&quot;);
+    else if(a&gt;0)
+        printf(&quot;a&gt;0\n&quot;);
+    else
+        printf(&quot;a&lt;=0\n&quot;);
+    return 0;
+}
+</code></pre>
+
+<h2 id="第十一题">第十一题</h2>
+
+<p>ex5.c 折半查找</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+#define DATANUM 15
+int binsearch(int x,int v[],int n);
+
+int main()
+{
+    int data[]={1,2,4,10,29,33,35,48,54,56,61,62,63,70,79};
+    int x;
+    int index;
+    scanf(&quot;%d&quot;,&amp;x);
+    index=binsearch(x,data,DATANUM);
+    if(index!=-1)
+        printf(&quot;index=%d\n&quot;,index);
+    else
+        printf(&quot;%d&quot;is no in the array\n,x);
+    return 0;
+}
+
+int binsearch(int x,int v[],int n)
+{
+    int low,high,mid;
+    low=0;
+    high=n-1;
+    while(low&lt;=high)
+    {
+        mid=(high+low)/2;
+        if(x&gt;v[mid])
+            low=mid+1;
+        else if(x&lt;v[mid])
+            high=mid-1;
+        else
+            return mid;
+    }
+    return -1;
+}
+</code></pre>
+
+<h2 id="第十二题">第十二题</h2>
+
+<p>ex6.c</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int a,num=0;
+    scanf(&quot;%d&quot;,&amp;a);
+    switch(a)
+    {
+        case 0:num=num+0;
+        case 1:num=num+1;
+        case 2:num=num+2;
+        case 3:num=num+3;
+        case 4:num=num+4;
+        case 5:num=num+5;
+        case 6:num=num+6;
+    }
+    printf(&quot;num=%d\n&quot;,num);
+    return 0;
+}
+</code></pre>
+
+<h2 id="第十三题">第十三题</h2>
+
+<p>ex7.c</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int a,num=0;
+    scanf(&quot;%d&quot;,&amp;a);
+    switch(a)
+    {
+        case 0:num=num+0;
+            break;
+        case 1:num=num+1;
+            break;
+        case 2:num=num+2;
+            break;
+        case 3:num=num+3;
+            break;
+        case 4:num=num+4;
+            break;
+        case 5:num=num+5;
+            break;
+        case 6:num=num+6;
+            break;
+    }
+    printf(&quot;num=%d\n&quot;,num);
+    return 0;
+}
+</code></pre>
+
+<h2 id="第十四题">第十四题</h2>
+
+<p>ex8.c 统计数字、空格、其它字符个数</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+int main()
+{
+    int c,i,nwhite,nother,ndigit[10];
+    nwhite=nother=0;
+    for(i=0;i&lt;10;i++)
+        ndigit[i]=0;
+    while((c=getchar())!=EOF)
+    {
+        switch(c)
+        {
+            case '0':case '1':case '2':case '3': case '4':case '5':case '6':case '7':case '8':case '9':
+                ndigit[c-'0']++;
+                break;
+            case ' ':
+            case '\n':
+            case '\t':
+                nwhite++;
+                break;
+            default:
+                nother++;
+        }
+    }
+    printf(&quot;digits=&quot;);
+    for(i=0;i&lt;10;i++)
+        printf(&quot; %d&quot;,ndigit[i]);
+    printf(&quot;, white space = %d, other =%d\n&quot;,nwhite,nother);
+    return 0;
+}
+</code></pre>
+
+          </div>
+
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+                <a href=https://wanzaiwharf.github.io/blog/1-01/ class="post-meta">Next
+                  <div class="pt-2 pb-5 flex-reverse">
+                    <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
+                    <span></span>
+                  </div>
+                </a>
+              
+            </div>
+          </div>
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+
+    </div>
+    
+
+
+  </main>
+  
+
+
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+      <a href="//github.com/wanzaiwharf " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+    
+        <a href="mailto:wanzaiwharf@gmail.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <span>  2016 - 2019 &copy; | Theme <a href='https://github.com/orianna-zzo/AllinOne' target="_blank">AllinOne</a> by <a href='https://github.com/orianna-zzo' target="_blank">Orianna</a>  </span>
+  </div>
+  
+
+</footer>
+
+
+    
+
+
+
+
+
+
+<script type="text/javascript" src="https://wanzaiwharf.github.io/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://wanzaiwharf.github.io/js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://wanzaiwharf.github.io/js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="https://wanzaiwharf.github.io/js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="https://wanzaiwharf.github.io/js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="https://wanzaiwharf.github.io/js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="https://wanzaiwharf.github.io/js/main.js"></script>
+
+
+
+  
+  <script src="https://wanzaiwharf.github.io/js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+ 
+  <script src="https://wanzaiwharf.github.io/js/vendors/katex/katex.min.js"> </script>
+  <script src="https://wanzaiwharf.github.io/js/vendors/katex/contrib/auto-render.min.js"></script>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          renderMathInElement(document.body);
+      });
+  </script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
+</html>
