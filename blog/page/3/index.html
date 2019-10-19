@@ -14,7 +14,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://wanzaiwharf.github.io/blog/" />
 
-<meta property="og:updated_time" content="2019-09-23T21:34:15+08:00" />
+<meta property="og:updated_time" content="2019-10-19T11:07:50+08:00" />
 
 
   <title>
@@ -371,25 +371,24 @@
           
               <div class="post-wrapper white-bg post-card">
   
-  <a href="https://wanzaiwharf.github.io/blog/1-01/">
+  <a href="https://wanzaiwharf.github.io/blog/2019-09/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
     <div class="post-header text-center">
-      <div class="px-4 post-heading"></div>
+      <div class="px-4 post-heading">C语言学习笔记</div>
       <ul class="post-meta li-x mt-1">
         
-          <li>Jan 1, 0001</li>
+          <li>Sep 23, 2019</li>
         
     
         
           <li class="middot"></li>
-          <li>2 minutes read</li>
+          <li>One minute read</li>
         
       </ul>
     </div>
     
 
     
-      title: “[C语言学习笔记-第五周整理]” date: 2019-10-19T10:04:42&#43;08:00 draft: true toc: true
-09.27课堂作业 例1 #include&lt;stdio.h&gt; #define MAXLINE 1000 int mygetline(char line[],int maxline); void copy(char to[],char from[]); int main() { int len,max; char longest[MAXLINE]; char line[MAXLINE]; max=0; while((len=mygetline(line,MAXLINE))&gt;0) if(len&gt;max) { max=len; copy(longest,line); } if(max&gt;0) printf(&#34;\nThe longest is: %s\n length=%d\n&#34;,longest,max); return 0; } int mygetline(char s[],int lim) { int c,i; for(i=0;i&lt;lim-1 &amp;&amp; (c=getchar())!=EOF &amp;&amp; c!=&#39;\n&#39;;&#43;&#43;i) s[i]=c; if(c==&#39;\n&#39;) { s[i]=c; &#43;&#43;i; } s[i]=&#39;\0&#39;; return i; } void copy(char to[],char from[]) { int i; i=0; while((to[i]=from[i])!=&#39;\0&#39;) &#43;&#43;i; }  09.29 例3 统计一个字符串的字符个数 #include&lt;stdio.h&gt; #define MAXLENGTH 1000 int mystrlen(char s[]); int main() { char mystring[MAXLENGTH]; int len; scanf(&#34;%s&#34;,mystring); len=mystrlen(mystring); printf(&#34;Len=%d\n&#34;,len); return 0; } int mystrlen(char s[]) { int i; i=0; while(s[i]!=&#39;\0&#39;) &#43;&#43;i; return i; }  例4 枚举常量的值 #include&lt;stdio.h&gt; enum escapes { BELL=&#39;\a&#39;, BACKSPACE=&#39;\b&#39;, TAB=&#39;\t&#39;, NEWLINE=&#39;\n&#39;, VTAB=&#39;\v&#39;, RETURN=&#39;\r&#39;, }; int main() { enum escapes be,ba,ta,ne,vt,re; be=BELL; ba=BACKSPACE; ta=TAB; ne=NEWLINE; vt=VTAB; re=RETURN; printf(&#34;be=%d\n&#34;,be); printf(&#34;ba=%d\n&#34;,ba); printf(&#34;ta=%d\n&#34;,ta); printf(&#34;ne=%d\n&#34;,ne); printf(&#34;vt=%d\n&#34;,vt); printf(&#34;re=%d\n&#34;,re); return 0; }  例5 测量除法、求余操作 #include&lt;stdio.h&gt; int main() { int a,b; a=5; b=2; printf(&#34;a=%d b=%d a/b=%d a%%b=%d\n&#34;,a,b,a/b,a%b); a=-5; b=2; printf(&#34;a=%d b=%d a/b=%d a%%b=%d\n&#34;,a,b,a/b,a%b); return 0; }  例6 逻辑运算符中求值顺序 #include&lt;stdio.h&gt; int main() { int i,j; i=j=0; if(&#43;&#43;i==1||&#43;&#43;j&gt;0) { printf(&#34;i=%d,j=%d\n&#34;,i,j); } i=j=0; if(&#43;&#43;i!=1||&#43;&#43;j&gt;0) { printf(&#34;i=%d,j=%d\n&#34;,i,j); } return 0; }  例7 将字符串转换成整数 #include&lt;stdio.......
+      C语言学习整理 [C语言学习笔记]——此前缀用于标记和C语言学习相关的博文。 学习笔记中均使用linux C编程，gcc编译，gdb调试。......
     
   </a>
 

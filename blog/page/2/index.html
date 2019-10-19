@@ -14,7 +14,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://wanzaiwharf.github.io/blog/" />
 
-<meta property="og:updated_time" content="2019-09-23T21:34:15+08:00" />
+<meta property="og:updated_time" content="2019-10-19T11:07:50+08:00" />
 
 
   <title>
@@ -371,9 +371,48 @@
           
               <div class="post-wrapper white-bg post-card">
   
-  <a href="https://wanzaiwharf.github.io/blog/2019-09/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+  <a href="https://wanzaiwharf.github.io/blog/2019-09/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%AC%AC%E5%9B%9B%E5%91%A8%E6%95%B4%E7%90%86/">
     <div class="post-header text-center">
-      <div class="px-4 post-heading">C语言学习笔记</div>
+      <div class="px-4 post-heading">[C语言学习笔记——第四周整理]</div>
+      <ul class="post-meta li-x mt-1">
+        
+          <li>Sep 23, 2019</li>
+        
+    
+        
+          <li class="middot"></li>
+          <li>4 minutes read</li>
+        
+      </ul>
+    </div>
+    
+
+    
+      第三周放中秋假停课 课后习题 第一题 输入一串字符，并进行回显 #include&lt;stdio.h&gt; int main() { int c; c=getchar();//getchar 读取键盘输入并将读取到的值放入变量中 while(c!=EOF) { putchar(c);//循环中的结束条件EOF表示ctrl&#43;d或回车 c=getchar(); } return 0; } 第二题 统计键盘上键入的字符的个数 #include&lt;stdio.h&gt; int main() { long nc; int c; nc=0; c=getchar(); while(c!=EOF) { &#43;&#43;nc;//表示nc加1 c=getchar(); } printf(&#34;\nthe totoal number:%ld\n&#34;,nc); return 0; } 第三题 统计键盘输入时输入中行的个数 #include&lt;stdio.h&gt; int main() { int nl,c; nl=0; while((c=getchar())!=EOF) { if(c==&#39;\n&#39;)//&#39;a&#39;:表示1个常量，常量值为a字......
+    
+  </a>
+
+  
+  
+  <div class="post-meta li-x mt-2 div-x">
+    <div>
+      
+      
+    </div>
+   
+    <div>
+      
+    </div>
+  </div>
+
+</div>
+
+          
+              <div class="post-wrapper white-bg post-card">
+  
+  <a href="https://wanzaiwharf.github.io/blog/2019-09/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%8C%E5%91%A8%E6%95%B4%E7%90%86/">
+    <div class="post-header text-center">
+      <div class="px-4 post-heading">[C语言学习笔记——第二周整理]</div>
       <ul class="post-meta li-x mt-1">
         
           <li>Sep 23, 2019</li>
@@ -388,7 +427,7 @@
     
 
     
-      C语言学习整理 [C语言学习笔记]——此前缀用于标记和C语言学习相关的博文。 学习笔记中均使用linux C编程，gcc编译，gdb调试。......
+      课后作业 第一题 计算1到5的乘积，即5的阶乘 #include&lt;stdio.h&gt; int main() { int product; product=1*2*3*4*5; printf(&#34;The product from 1 to 5 is %d&#34;,product); return 0; } 第二题 手动输入n，然后计算从1依次相乘到n的乘积 #include&lt;stdio.h&gt; int main() { int prod(int n); int product; int n; scanf(&#34;%d&#34;,&amp;n); product=prod(n); printf(&#34;The product from 1 to %d is %d\n&#34;,n,product); return 0; } int prod(int n) { int p,i; p=1; i=1; do{ p=p*i; i=i&#43;1; }while(i&lt;=n);//do while循环 return p; } 第三题 在第二题的基础上更改程序，使其能计算从1到n的奇数依次相乘的乘积 #include&lt;stdio.h&gt; int main() { int prod(int n); int product; int n; scanf(&#34;%d&#34;,&amp;n); product=prod(n); printf(&#34;The product from 1 to %d is %d\n&#34;,n,product); return 0; } int prod(int n) { int p,i; p=1; i=1; do{ p=p*i; i=i&#43;2;//改一个加2即可，主要需要熟练......
     
   </a>
 
@@ -410,79 +449,24 @@
           
               <div class="post-wrapper white-bg post-card">
   
-  <a href="https://wanzaiwharf.github.io/blog/1-01/">
+  <a href="https://wanzaiwharf.github.io/blog/2019-09/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%80%E5%91%A8%E6%95%B4%E7%90%86/">
     <div class="post-header text-center">
-      <div class="px-4 post-heading"></div>
+      <div class="px-4 post-heading">[C语言学习笔记——第一周整理]</div>
       <ul class="post-meta li-x mt-1">
         
-          <li>Jan 1, 0001</li>
+          <li>Sep 23, 2019</li>
         
     
         
           <li class="middot"></li>
-          <li>3 minutes read</li>
+          <li>One minute read</li>
         
       </ul>
     </div>
     
 
     
-      title: “[C语言学习笔记-第七周整理]” date: 2019-10-19T10:04:42&#43;08:00 draft: true toc: true
-第一题 ex_13.c 将字符串s[]中的与c变量相同字符删除
-#include&lt;stdio.h&gt; void squeeze(char s[],int c); int main() { char str[]=&#34;Hello world!\n&#34;; int c=&#39;o&#39;; squeeze(str,c); printf(&#34;%s&#34;,str); return 0; } void squeeze(char s[],int c) { int i,j; for(i=j=0;s[i]=&#39;\0&#39;;i&#43;&#43;) if(s[i]!=c) s[j&#43;&#43;]=s[i]; s[j]=&#39;\0&#39;; }  第二题 ex_14.c strcat函数
-#include&lt;stdio.h&gt; #define MAXLEN 100 int main() { void mystrcat(char[],char[]); char s[MAXLEN]=&#34;Hello&#34;; char t[]=&#34; world!&#34;; mystrcat(s,t); printf(&#34;s=%s\n&#34;,s); return 0; } void mystrcat(char s[],char t[]) { int i,j; i=j=0; while(s[i]!=&#39;\0&#39;) i&#43;&#43;; while((s[i&#43;&#43;]=t[j&#43;&#43;])!=&#39;\0&#39;) ; }  第三题 ex_15.c getbits（int x, int p, int n)
-#include&lt;stdio.h&gt; unsigned getbits(unsigned, int, int); int main() { int b,a=0x56674; b=getbits(a,5,2); printf(&#34;b=%x\n&#34;,b); return 0; } unsigned getbits(unsigned x,int p,int n) { return(x&gt;&gt;(p&#43;1-n))&amp;~(~0 &lt;&lt;n); }  第四题 ex_16.c 统计变量x中1的个数
-#include&lt;stdio.h&gt; unsigned bitcount(unsigned); int main() { int a=0x56674,b; b=bitcount(a); printf(&#34;b=%d\n&#34;,b); return 0; } unsigned bitcount(unsigned x) { int b; for(b=0;x!=0;x&gt;&gt;=1) if(x&amp;01) &#43;&#43;b; return b; }  第五题 ex_17.c 输出自然数，每10个换一次行
-#include&lt;stdio.h&gt; #define N 123 int main() { int i; for(i=0;i&lt;N;i&#43;&#43;) printf(&#34;%6d%c&#34;,i,(i%10==9||i==N-1)?&#39;\n&#39;:&#39; &#39;); return 0; }  第六题 ex_18.c 名词的单复数
-#include&lt;stdio.h&gt; #define N 5 int main() { int i; for(i=1;i&lt;N;i&#43;&#43;) printf(&#34;You have %d item%s. \n&#34;,i,(i==1)?&#34;&#34;:&#34;s&#34;); return 0; }  第七题 ex1_statement.c
-#include&lt;stdio.h&gt; int main() { int a,b,c; 1; a; a&#43;b; a&#43;=c; a&#43;&#43;; a,b,c; ; a&#43;=a,b,c&#43;&#43;; printf(&#34;a=%d b=%d c=%d\n&#34;,a,b,c); return 0; }  第八题 ex2.......
-    
-  </a>
-
-  
-  
-  <div class="post-meta li-x mt-2 div-x">
-    <div>
-      
-      
-    </div>
-   
-    <div>
-      
-    </div>
-  </div>
-
-</div>
-
-          
-              <div class="post-wrapper white-bg post-card">
-  
-  <a href="https://wanzaiwharf.github.io/blog/1-01/">
-    <div class="post-header text-center">
-      <div class="px-4 post-heading"></div>
-      <ul class="post-meta li-x mt-1">
-        
-          <li>Jan 1, 0001</li>
-        
-    
-        
-          <li class="middot"></li>
-          <li>2 minutes read</li>
-        
-      </ul>
-    </div>
-    
-
-    
-      title: “[C语言学习笔记]第五周习题课” date: 2019-10-19T10:04:42&#43;08:00 draft: true toc: true
-第一题 编写程序输出所有水仙花数
-水仙花数：一个三位数，各位数字的立方和等于改数本身
-#include&lt;stdio.h&gt; int main() { int hun, ten, ind, n; printf(&#34;全部水仙花数如下:\n&#34;); for( n=100; n&lt;1000; n&#43;&#43; ) /*的取值范围*/ { hun = n / 100; ten = (n-hun*100) / 10; ind = n % 10; if(n == hun*hun*hun &#43; ten*ten*ten &#43; ind*ind*ind) /*各位上的立方和是否与原数n相等*/ printf(&#34;%d &#34;, n); } printf(&#34;\n&#34;); return 0; }  第二题 编写程序输出1000以内的完数
-完数：除自身以外所有因子之和等于自身的数
-#include&lt;stdio.h&gt; int main() { int j,s,n; for(n=2;n&lt;1000;n&#43;&#43;) { for( j=1; j&lt;n; j&#43;&#43; ) { if(n%j == 0) /*判断j是否为i的因子*/ s &#43;= j; } if(s == n) /*判断因子之和是否和原数相等*/ printf(&#34;%d 是1000以内的完数\n&#34;, n); } return 0; }  第三题 编写一个函数，将一个字符串中的元音字母复制到另一个字符串
-要求主函数中读入，主函数中输出
-#include&lt;stdio.h&gt; #include&lt;string.h&gt; void str(char a[100],char b[100]) { int i=0, j=0; while(a[i]!=&#39;\0&#39;)//&#39;\0&#39;代表ASCLL码0的字符，即是一个空操作符也就是是结束符; { if(a[i]==&#39;a&#39;||a[i]==&#39;e&#39;||a[i]==&#39;i&#39;||a[i]==&#39;o&#39;||a[i]==&#39;u&#39;)/*直接通过if判断字母是否为原音字母*/ { b[j]=a[i]; j&#43;&#43;; } i&#43;&#43;; } } int main() { char a[100]; char b[100]; fgets(a,100,stdin);//fgets(name, sizeof(name), stdin); //stdin 意思是键盘输入 str(a,b); puts(b); return 0; }  第四题 读入一组文本行（行数大于2），打印最短的两个文本行
-#include &lt;stdio.h&gt; #define MAXLINE 1000 int readline(char line[], int minline); void copy(char to[], char from[]); int main(void) { int len; int min,secmin; int secmin; char line[MAXLINE]; char shortest[MAXLINE]; char secshortest[MAXLINE]; min = 1000; secmin=1000; while ((len = readline(line, MAXLINE)) &gt; 0) //用len来保存行长度 { printf (&#34;%d, %s&#34;, len, line); //相比上个程序，这里增加了一行打印 if (len &lt; min&amp;&amp;secmin&gt;min) { secmin=min; min = len; copy (shortest, line); copy (secshortest, shortest); } } if (min &gt; 0) printf (&#34;第二短文本行为%s&#34;, secshortest); printf (&#34;最短文本行为%s&#34;, shortest); /*以上部分为打印最短文本行,以下为打印第二短文本行*/ return 0; } int readline(char s[], int lim) { int c, i, j; //增加一个变量j j = 0; for (i = 0; (c = getchar()) !......
+      课后作业 第一题 所有初学者第一次遇见的程序，print “hello world!” #include&lt;stdio.h&gt; int main() { printf(&#34;hello world\n&#34;); return 0; } 第二题 给定数值的加法运算 #include&lt;stdio.h&gt; int main() { int a,b,sum;//int 变量定义，int定义一个整型 a=123; b=456; sum=a&#43;b; printf(&#34;Sum is %d\n&#34;,sum); return 0; } 第三题 键盘输入两个整数，比大小 #include&lt;stdio.h&gt; int a,b,c; int main() { int max(int x,int y); scanf(&#34;%d%d&#34;,&amp;b,&amp;a);//scanf 扫描输入，%d 对应int定义的整型 c=max(a,b); printf(&#34;max=%d\n&#34;,c); return 0; } int max(int x,int y)//在主函数外定义一个函数 { int z; if(x&gt;y) z=x; else z=y; return z;//返回值的问题 } 习题课作业 安装虚拟机（本人自用manjaro发行版系统实体机），完成课上例......
     
   </a>
 

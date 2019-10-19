@@ -7,23 +7,23 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
   <meta name="author" content="wanzaiwharf">
-  <meta name="description" content="第三周放中秋假停课 课后习题 第一题 输入一串字符，并进行回显 #include&lt;stdio.h&gt; int main() { int c; c=getchar();//getchar 读取键盘输入并将读取到的值放入变量中 while(c!=EOF) { putchar(c);//循环中的结束条件EOF表示ctrl&#43;d或回车 c=getchar(); } return 0; } 第二题 统计键盘上键入的字符的个数 #include&lt;stdio.h&gt; int main() { long nc; int c; nc=0; c=getchar(); while(c!=EOF) { &#43;&#43;nc;//表示nc加1 c=getchar(); } printf(&quot;\nthe totoal number:%ld\n&quot;,nc); return 0; } 第三题 统计键盘输入时输入中行的个数 #include&lt;stdio.h&gt; int main() { int nl,c; nl=0; while((c=getchar())!=EOF) { if(c==&#39;\n&#39;)//&#39;a&#39;:表示1个常量，常量值为a字">
+  <meta name="description" content="课堂练习 第一题 ex_13.c 将字符串s[]中的与c变量相同字符删除 #include&lt;stdio.h&gt; void squeeze(char s[],int c); int main() { char str[]=&quot;Hello world!\n&quot;; int c=&#39;o&#39;; squeeze(str,c); printf(&quot;%s&quot;,str); return 0; } void squeeze(char s[],int c) { int i,j; for(i=j=0;s[i]=&#39;\0&#39;;i&#43;&#43;) if(s[i]!=c) s[j&#43;&#43;]=s[i]; s[j]=&#39;\0&#39;; } 第二题 ex_14.c strcat函数 #include&lt;stdio.h&gt; #define MAXLEN 100 int main() { void mystrcat(char[],char[]); char s[MAXLEN]=&quot;Hello&quot;; char t[]=&quot; world!&quot;; mystrcat(s,t); printf(&quot;s=%s\n&quot;,s); return 0; } void mystrcat(char s[],char t[]) { int i,j; i=j=0; while(s[i]!=&#39;\0&#39;) i&#43;&#43;; while((s[i&#43;&#43;]=t[j&#43;&#43;])!=&#39;\0&#39;) ; } 第三题 ex_15.c getbits（int x, int p, int n) #include&lt;stdio.h&gt; unsigned getbits(unsigned, int, int); int main() { int b,a=0x56674; b=getbits(a,5,2); printf(&quot;b=%x\n&quot;,b); return 0; } unsigned getbits(unsigned x,int p,int n) { return(x&gt;&gt;(p&#43;1-n))&amp;~(~0 &lt;&lt;n); } 第四题 ex_16.c 统计变量x中1的个数 #include&lt;stdio.h&gt; unsigned bitcount(unsigned); int main() { int a=0x56674,b; b=bitcount(a); printf(&quot;b=%d\n&quot;,b); return 0; } unsigned bitcount(unsigned x) { int b; for(b=0;x!=0;x&gt;&gt;=1) if(x&amp;01) &#43;&#43;b; return b; } 第五题 ex_17.c 输出自然数，每10个换一">
   
-  <meta property="og:title" content="[C语言学习笔记——第四周整理]" />
-<meta property="og:description" content="第三周放中秋假停课 课后习题 第一题 输入一串字符，并进行回显 #include&lt;stdio.h&gt; int main() { int c; c=getchar();//getchar 读取键盘输入并将读取到的值放入变量中 while(c!=EOF) { putchar(c);//循环中的结束条件EOF表示ctrl&#43;d或回车 c=getchar(); } return 0; } 第二题 统计键盘上键入的字符的个数 #include&lt;stdio.h&gt; int main() { long nc; int c; nc=0; c=getchar(); while(c!=EOF) { &#43;&#43;nc;//表示nc加1 c=getchar(); } printf(&quot;\nthe totoal number:%ld\n&quot;,nc); return 0; } 第三题 统计键盘输入时输入中行的个数 #include&lt;stdio.h&gt; int main() { int nl,c; nl=0; while((c=getchar())!=EOF) { if(c==&#39;\n&#39;)//&#39;a&#39;:表示1个常量，常量值为a字" />
+  <meta property="og:title" content="[C语言学习笔记]第七周整理" />
+<meta property="og:description" content="课堂练习 第一题 ex_13.c 将字符串s[]中的与c变量相同字符删除 #include&lt;stdio.h&gt; void squeeze(char s[],int c); int main() { char str[]=&quot;Hello world!\n&quot;; int c=&#39;o&#39;; squeeze(str,c); printf(&quot;%s&quot;,str); return 0; } void squeeze(char s[],int c) { int i,j; for(i=j=0;s[i]=&#39;\0&#39;;i&#43;&#43;) if(s[i]!=c) s[j&#43;&#43;]=s[i]; s[j]=&#39;\0&#39;; } 第二题 ex_14.c strcat函数 #include&lt;stdio.h&gt; #define MAXLEN 100 int main() { void mystrcat(char[],char[]); char s[MAXLEN]=&quot;Hello&quot;; char t[]=&quot; world!&quot;; mystrcat(s,t); printf(&quot;s=%s\n&quot;,s); return 0; } void mystrcat(char s[],char t[]) { int i,j; i=j=0; while(s[i]!=&#39;\0&#39;) i&#43;&#43;; while((s[i&#43;&#43;]=t[j&#43;&#43;])!=&#39;\0&#39;) ; } 第三题 ex_15.c getbits（int x, int p, int n) #include&lt;stdio.h&gt; unsigned getbits(unsigned, int, int); int main() { int b,a=0x56674; b=getbits(a,5,2); printf(&quot;b=%x\n&quot;,b); return 0; } unsigned getbits(unsigned x,int p,int n) { return(x&gt;&gt;(p&#43;1-n))&amp;~(~0 &lt;&lt;n); } 第四题 ex_16.c 统计变量x中1的个数 #include&lt;stdio.h&gt; unsigned bitcount(unsigned); int main() { int a=0x56674,b; b=bitcount(a); printf(&quot;b=%d\n&quot;,b); return 0; } unsigned bitcount(unsigned x) { int b; for(b=0;x!=0;x&gt;&gt;=1) if(x&amp;01) &#43;&#43;b; return b; } 第五题 ex_17.c 输出自然数，每10个换一" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://wanzaiwharf.github.io/blog/2019-09/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%AC%AC%E5%9B%9B%E5%91%A8%E6%95%B4%E7%90%86/" />
-<meta property="article:published_time" content="2019-09-23T21:34:15+08:00" />
-<meta property="article:modified_time" content="2019-09-23T21:34:15+08:00" />
+<meta property="og:url" content="https://wanzaiwharf.github.io/blog/2019-10/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%83%E5%91%A8%E6%95%B4%E7%90%86/" />
+<meta property="article:published_time" content="2019-10-19T11:07:50+08:00" />
+<meta property="article:modified_time" content="2019-10-19T11:07:50+08:00" />
 
 
   <title>
   
-       [C语言学习笔记——第四周整理] | wanzaiwharf 
+       [C语言学习笔记]第七周整理 | wanzaiwharf 
   
   </title>
 
-  <link rel="canonical" href="https://wanzaiwharf.github.io/blog/2019-09/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%AC%AC%E5%9B%9B%E5%91%A8%E6%95%B4%E7%90%86/">
+  <link rel="canonical" href="https://wanzaiwharf.github.io/blog/2019-10/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%83%E5%91%A8%E6%95%B4%E7%90%86/">
 
   
   
@@ -295,16 +295,16 @@
     
   </ul>
 
-  <div class="px-4 post-heading">[C语言学习笔记——第四周整理]</div>
+  <div class="px-4 post-heading">[C语言学习笔记]第七周整理</div>
 
   <ul class="post-meta li-x mt-1">
     
-      <li>Sep 23, 2019</li>
+      <li>Oct 19, 2019</li>
     
 
     
       <li class="middot"></li>
-      <li>4 minutes read</li>
+      <li>2 minutes read</li>
     
   </ul>
   
@@ -315,353 +315,350 @@
           <div class="post-content markdown">
             
 
-<blockquote>
-<p>第三周放中秋假停课</p>
-</blockquote>
+<h1 id="课堂练习">课堂练习</h1>
 
-<h2 id="课后习题">课后习题</h2>
+<h2 id="第一题">第一题</h2>
 
-<h3 id="第一题">第一题</h3>
-
-<p>输入一串字符，并进行回显</p>
+<p>ex_13.c 将字符串s[]中的与c变量相同字符删除</p>
 
 <pre><code class="language-c">#include&lt;stdio.h&gt;
+void squeeze(char s[],int c);
 
 int main()
 {
-    int c;
-    c=getchar();//getchar 读取键盘输入并将读取到的值放入变量中
-    while(c!=EOF)
-    {
-        putchar(c);//循环中的结束条件EOF表示ctrl+d或回车
-        c=getchar();
-    }
-    return 0;
-}
-</code></pre>
-
-<h3 id="第二题">第二题</h3>
-
-<p>统计键盘上键入的字符的个数</p>
-
-<pre><code class="language-c">#include&lt;stdio.h&gt;
-
-int main()
-{
-    long nc;
-    int c;
-    nc=0;
-    c=getchar();
-    while(c!=EOF)
-    {
-        ++nc;//表示nc加1
-        c=getchar();
-    }
-    printf(&quot;\nthe totoal number:%ld\n&quot;,nc);
-    return 0;
-}
-</code></pre>
-
-<h3 id="第三题">第三题</h3>
-
-<p>统计键盘输入时输入中行的个数</p>
-
-<pre><code class="language-c">#include&lt;stdio.h&gt;
-
-int main()
-{
-    int nl,c;
-    nl=0;
-    while((c=getchar())!=EOF)
-    {
-        if(c=='\n')//'a':表示1个常量，常量值为a字符的ASCII码97&quot;a&quot;：表示1个字符串，这个字符串占2个字节内存，第1个字节是'a'，第2个字节是'\0'\0 等同与0 0表示一个字符串的结束
-            ++nl;
-    }
-    printf(&quot;\nthe amount of line:%d\n&quot;,nl);
-    return 0;
-}
-</code></pre>
-
-<h3 id="第四题">第四题</h3>
-
-<p>统计输入的字符串中有多少个单词</p>
-
-<pre><code class="language-c">#include&lt;stdio.h&gt;
-
-int main()
-{
-    int nw;
-    int state;
-    int c;
-    
-    state=0;
-    nw=0;
-    while((c=getchar())!=EOF)
-    {
-        if(c==' '||c=='\t'||c=='\n')
-        {
-            state=0;
-        }else{
-            if(state==0)
-            {
-            ++nw;
-            state=1;
-            }
-        }
-    }
-    printf(&quot;\nThe amount of words is:%d\n&quot;,nw);
-    return 0;
-}
-</code></pre>
-
-<p>进阶，要求同时统计单词个数，空格个数，回车个数</p>
-
-<pre><code class="language-c">#include&lt;stdio.h&gt;
-
-int main()
-{
-    int nw;
-    int state;
-    int c,nl,nc;
-    
-    state=0;
-    nw=nl=nc=0;
-    while((c=getchar())!=EOF)
-    {
-        ++nc;
-        if(c=='\n')
-            ++nl;
-        if(c==' '||c=='\t'||c=='\n')//||表示或逻辑，&amp;&amp;表示与逻辑
-        {
-            state=0;
-        }else{
-            if(state==0)
-            {
-            ++nw;
-            state=1;
-            }
-        }
-    }
-    printf(&quot;\nThe amount of words is:%d\n The amount of enters is:%d\n The amount of counts is:%d\n&quot;,nw,nl,nc);
-    return 0;
-}
-</code></pre>
-
-<h3 id="第五题">第五题</h3>
-
-<p>统计每个数字、空白符、以及其它字符出现的次数</p>
-
-<pre><code class="language-c">#include&lt;stdio.h&gt;
-
-int main()
-{
-    int c,i,nwhite,nother;
-    int ndigit[10];//数组初接触
-    nwihte=nother=0;
-    for(i=0;i&lt;10;++i)
-        ndigit[i]=0;
-    
-    while((c=getchar())!=EOF)
-        if(c&gt;='0'&amp;&amp;c&lt;='9')
-            ++ndigit[c-'0'];
-    	else if(c==' '||c=='\n'||c=='\t')
-        	++nwhite;
-    	else
-        	++nother;
-    printf(&quot;\ndigits =&quot;);
-    for(i=0;i&lt;10;++i)
-        printf(&quot; %d&quot;,ndigit[i]);
-    printf(&quot;, white space = %d, other=%d\n&quot;,nwhite,nother);
-    return 0;
-}
-</code></pre>
-
-<h3 id="第六题">第六题</h3>
-
-<p>利用函数来计算m的n次冪</p>
-
-<pre><code class="language-c">#include&lt;stdio.h&gt;
-int power(int m,int n);
-
-int main()
-{
-    int i;
-    for(i=0;i&lt;10;i++)
-        printf(&quot;%3d %6d %6d\n&quot;,i,power(2,i),power(-3,i));
+    char str[]=&quot;Hello world!\n&quot;;
+    int c='o';
+    squeeze(str,c);
+    printf(&quot;%s&quot;,str);
     return 0;
 }
 
-int power(int base,int n)
+void squeeze(char s[],int c)
 {
-    int i,p;
-    p=1;
-    for(i=1;i&lt;=n;++i)
-        p=p*base;
-    return p;
+    int i,j;
+    for(i=j=0;s[i]='\0';i++)
+        if(s[i]!=c)
+            s[j++]=s[i];
+    s[j]='\0';
 }
 </code></pre>
 
-<h2 id="习题课作业">习题课作业</h2>
+<h2 id="第二题">第二题</h2>
 
-<h3 id="第一题-1">第一题</h3>
-
-<p>求n，m的最大公约数和最小公倍数</p>
+<p>ex_14.c strcat函数</p>
 
 <pre><code class="language-c">#include&lt;stdio.h&gt;
+#define MAXLEN 100
 
 int main()
 {
-    int m,n,a,b,x,y,z;
-    printf(&quot;输入数据m和n，中间用空格隔开\n&quot;);
-    scanf(&quot;%d %d&quot;,&amp;m,&amp;n);
-    a=m;
-    b=n;
-	while(a%b!=0)
-    {
-        x=a%b;
-        a=b;
-        b=x;
-    }
-    printf(&quot;m,n的最大公约数为%d\n&quot;,x);//求最大公约数部分
-    y=m*n;
-    z=y/x;
-    printf(&quot;m,n的最小公倍数为%d\n&quot;,z);//求最小公倍数部分
-    return 0;        
-}
-</code></pre>
-
-<h2 id="第二题-1">第二题</h2>
-
-<p>要求编写插入排序程序insertsort，对长度为len的数组s[]中的元素进行排序</p>
-
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-int main()
-{
-    int a[10];
-    int b[10];
-    int c[10];
-    int i,j,temp;
- 		 printf(&quot;输入数组a，数字中间用空格隔开\n&quot;);
-    for(i = 0; i &lt;10; i ++)
-        scanf(&quot;%d&quot;,&amp;a[i]); //输入   
-    //冒泡排序算法：进行 n-1 轮比较
-    for(i=0; i&lt;10-1; i++)
-    	  {
-        //每一轮比较前 n-1-i 个，也就是说，已经排序好的最后 i 个不用比较
-        for(j=0; j&lt;10-1-i; j++)
-        			{
-            if(a[j] &gt; a[j+1])
-            				  {
-                temp = a[j];
-                a[j] = a[j+1];
-                a[j+1] = temp;
-           					  }
-       				}
-    	  }
-    for(i = 0; i &lt;10; i ++)
-    	  {
-        printf(&quot;%d &quot;, a[i]);//输出。
-		  }
-		  printf(&quot;\n&quot;);
-		  
-    printf(&quot;输入数组b，数字中间用空格隔开\n&quot;);
-    for(i = 0; i &lt;10; i ++)
-        scanf(&quot;%d&quot;,&amp;b[i]); //输入   
-    //冒泡排序算法：进行 n-1 轮比较
-    for(i=0; i&lt;10-1; i++){
-        //每一轮比较前 n-1-i 个，也就是说，已经排序好的最后 i 个不用比较
-        for(j=0; j&lt;10-1-i; j++){
-            if(b[j] &gt; b[j+1]){
-                temp = b[j];
-                b[j] = b[j+1];
-                b[j+1] = temp;
-            }
-        }
-      }
-    for(i = 0; i &lt;10; i ++)
-    	  {
-        printf(&quot;%d &quot;, b[i]);//输出。
-          }
-	printf(&quot;\n&quot;);
-    printf(&quot;输入数组c，数字中间用空格隔开\n&quot;);
-    for(i = 0; i &lt;10; i ++)
-        scanf(&quot;%d&quot;,&amp;c[i]); //输入 
-         //冒泡排序算法：进行 n-1 轮比较
-    for(i=0; i&lt;10-1; i++){
-        //每一轮比较前 n-1-i 个，也就是说，已经排序好的最后 i 个不用比较
-        for(j=0; j&lt;10-1-i; j++){
-            if(c[j] &gt; c[j+1]){
-                temp = c[j];
-                c[j] = c[j+1];
-                c[j+1] = temp;
-            }
-        }
-    }
-    for(i = 0; i &lt;10; i ++)
-    	  {
-        printf(&quot;%d &quot;, c[i]);//输出。
-          }
-          printf(&quot;\n&quot;);
+    void mystrcat(char[],char[]);
+    char s[MAXLEN]=&quot;Hello&quot;;
+    char t[]=&quot; world!&quot;;
+    mystrcat(s,t);
+    printf(&quot;s=%s\n&quot;,s);
     return 0;
 }
-</code></pre>
 
-<h3 id="第三题-1">第三题</h3>
-
-<p>更改单词首字母为大写，其余更改为小写</p>
-
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-int main()
+void mystrcat(char s[],char t[])
 {
-    char a[100];
-    int i;
-    scanf(&quot;%s&quot;,a);
-    for(i=0;a[i]!='\0';i++){
-        if(a[i]&gt;='A'&amp;&amp;a[i]&lt;='Z')//大写字母 
-            a[i]+=32;
-        else if(a[i]&gt;='a'&amp;&amp;a[i]&lt;='z')//小写字母 
-            a[i]-=32;
-            }
-		   
-		if(a[0]&gt;='a'&amp;&amp;a[0]&lt;='z')//小写字母 
-            a[0]-=32;
-    puts(a);
-    return 0;
-} 	
-</code></pre>
-
-<h3 id="第四题-1">第四题</h3>
-
-<p>输入整数n，计算
-$$
-1+1/1！+1/2！+……1/n！
-$$</p>
-
-<pre><code class="language-c">#include&lt;stdio.h&gt;
-
-int main()
-{
-    int i,n,j;
-    float s,p;
-    s=0;
-    i=1;
-    printf(&quot;输入大于1的整数n,输入完后按回车开始计算\n&quot;);
-    scanf(&quot;%d&quot;,&amp;n);
-    while(i&lt;=n)
-    {
-        p=1;
-        j=1;//初始化分母的计算
-        while(j&lt;=i)//计算分母
-        {
-            p=p*j;
-        	j++;
-        }
-        s=s+1/p;
+    int i,j;
+    i=j=0;
+    while(s[i]!='\0')
         i++;
+    while((s[i++]=t[j++])!='\0')
+        ;
+}
+</code></pre>
+
+<h2 id="第三题">第三题</h2>
+
+<p>ex_15.c getbits（int x, int p, int n)</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+unsigned getbits(unsigned, int, int);
+
+int main()
+{
+    int b,a=0x56674;
+    b=getbits(a,5,2);
+    printf(&quot;b=%x\n&quot;,b);
+    return 0;
+}
+
+unsigned getbits(unsigned x,int p,int n)
+{
+    return(x&gt;&gt;(p+1-n))&amp;~(~0 &lt;&lt;n);
+}
+</code></pre>
+
+<h2 id="第四题">第四题</h2>
+
+<p>ex_16.c 统计变量x中1的个数</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+unsigned bitcount(unsigned);
+
+int main()
+{
+    int a=0x56674,b;
+    b=bitcount(a);
+    printf(&quot;b=%d\n&quot;,b);
+    return 0;
+}
+
+unsigned bitcount(unsigned x)
+{
+    int b;
+    for(b=0;x!=0;x&gt;&gt;=1)
+        if(x&amp;01)
+            ++b;
+    return b;
+}
+</code></pre>
+
+<h2 id="第五题">第五题</h2>
+
+<p>ex_17.c 输出自然数，每10个换一次行</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+#define N 123
+
+int main()
+{
+    int i;
+    for(i=0;i&lt;N;i++)
+        printf(&quot;%6d%c&quot;,i,(i%10==9||i==N-1)?'\n':' ');
+    return 0;
+}
+</code></pre>
+
+<h2 id="第六题">第六题</h2>
+
+<p>ex_18.c 名词的单复数</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+#define N 5
+
+int main()
+{
+    int i;
+    for(i=1;i&lt;N;i++)
+        printf(&quot;You have %d item%s. \n&quot;,i,(i==1)?&quot;&quot;:&quot;s&quot;);
+    return 0;
+}
+</code></pre>
+
+<h2 id="第七题">第七题</h2>
+
+<p>ex1_statement.c</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int a,b,c;
+    1;
+    a;
+    a+b;
+    a+=c;
+    a++;
+    a,b,c;
+    ;
+    a+=a,b,c++;
+    printf(&quot;a=%d b=%d c=%d\n&quot;,a,b,c);
+    return 0;
+}
+</code></pre>
+
+<h2 id="第八题">第八题</h2>
+
+<p>ex2.c</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int a,b,c;
+    a=b=5;
+    c=a++,a+b,b+=3;
+    printf(&quot;a=%d b=%d c=%d\n&quot;,a,b,c);
+    a=b=5;
+    c=(a++,a+b,b+=3);
+    printf(&quot;a=%d b=%d c=%d\n&quot;,a,b,c);
+    return 0;
+}
+</code></pre>
+
+<h2 id="第九题">第九题</h2>
+
+<p>ex3.c 与程序员意愿不⼀致的if…else匹配</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int n=10;
+    int a=5;
+    int i;
+    if(n&gt;0)
+        for(i=0;i&lt;n;i++)
+            if(a&gt;i)
+                printf(&quot;a=%d, i=%d, and a&gt;i\n&quot;,a,i);
+    else
+        printf(&quot;erreo:n&lt;0\n&quot;);
+    return 0;
+}
+</code></pre>
+
+<h2 id="第十题">第十题</h2>
+
+<p>ex4.c else if简单示例</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int a=10;
+    if(a&gt;5)
+        printf(&quot;a&gt;5\n&quot;);
+    else if(a&gt;0)
+        printf(&quot;a&gt;0\n&quot;);
+    else
+        printf(&quot;a&lt;=0\n&quot;);
+    return 0;
+}
+</code></pre>
+
+<h2 id="第十一题">第十一题</h2>
+
+<p>ex5.c 折半查找</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+#define DATANUM 15
+int binsearch(int x,int v[],int n);
+
+int main()
+{
+    int data[]={1,2,4,10,29,33,35,48,54,56,61,62,63,70,79};
+    int x;
+    int index;
+    scanf(&quot;%d&quot;,&amp;x);
+    index=binsearch(x,data,DATANUM);
+    if(index!=-1)
+        printf(&quot;index=%d\n&quot;,index);
+    else
+        printf(&quot;%d&quot;is no in the array\n,x);
+    return 0;
+}
+
+int binsearch(int x,int v[],int n)
+{
+    int low,high,mid;
+    low=0;
+    high=n-1;
+    while(low&lt;=high)
+    {
+        mid=(high+low)/2;
+        if(x&gt;v[mid])
+            low=mid+1;
+        else if(x&lt;v[mid])
+            high=mid-1;
+        else
+            return mid;
     }
-    printf(&quot;计算结果为%d\n&quot;,s);
+    return -1;
+}
+</code></pre>
+
+<h2 id="第十二题">第十二题</h2>
+
+<p>ex6.c</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int a,num=0;
+    scanf(&quot;%d&quot;,&amp;a);
+    switch(a)
+    {
+        case 0:num=num+0;
+        case 1:num=num+1;
+        case 2:num=num+2;
+        case 3:num=num+3;
+        case 4:num=num+4;
+        case 5:num=num+5;
+        case 6:num=num+6;
+    }
+    printf(&quot;num=%d\n&quot;,num);
+    return 0;
+}
+</code></pre>
+
+<h2 id="第十三题">第十三题</h2>
+
+<p>ex7.c</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int a,num=0;
+    scanf(&quot;%d&quot;,&amp;a);
+    switch(a)
+    {
+        case 0:num=num+0;
+            break;
+        case 1:num=num+1;
+            break;
+        case 2:num=num+2;
+            break;
+        case 3:num=num+3;
+            break;
+        case 4:num=num+4;
+            break;
+        case 5:num=num+5;
+            break;
+        case 6:num=num+6;
+            break;
+    }
+    printf(&quot;num=%d\n&quot;,num);
+    return 0;
+}
+</code></pre>
+
+<h2 id="第十四题">第十四题</h2>
+
+<p>ex8.c 统计数字、空格、其它字符个数</p>
+
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+int main()
+{
+    int c,i,nwhite,nother,ndigit[10];
+    nwhite=nother=0;
+    for(i=0;i&lt;10;i++)
+        ndigit[i]=0;
+    while((c=getchar())!=EOF)
+    {
+        switch(c)
+        {
+            case '0':case '1':case '2':case '3': case '4':case '5':case '6':case '7':case '8':case '9':
+                ndigit[c-'0']++;
+                break;
+            case ' ':
+            case '\n':
+            case '\t':
+                nwhite++;
+                break;
+            default:
+                nother++;
+        }
+    }
+    printf(&quot;digits=&quot;);
+    for(i=0;i&lt;10;i++)
+        printf(&quot; %d&quot;,ndigit[i]);
+    printf(&quot;, white space = %d, other =%d\n&quot;,nwhite,nother);
     return 0;
 }
 </code></pre>
@@ -681,23 +678,16 @@ int main()
           <div class="row pt-3">
             <div class="col-md-6">
               
-                <a href=https://wanzaiwharf.github.io/blog/2019-09/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%8C%E5%91%A8%E6%95%B4%E7%90%86/ class="post-meta">Previous
+                <a href=https://wanzaiwharf.github.io/blog/2019-10/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%94%E5%91%A8%E4%B9%A0%E9%A2%98%E8%AF%BE/ class="post-meta">Previous
                   <div class="pt-2 pb-5 d-flex">
                     <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
-                    <span>[C语言学习笔记——第二周整理]</span>
+                    <span>[C语言学习笔记]第五周习题课</span>
                   </div>
                 </a>
               
             </div>
             
             <div class="col-md-6 text-right" >
-              
-                <a href=https://wanzaiwharf.github.io/blog/2019-10/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%94%E5%91%A8%E6%95%B4%E7%90%86/ class="post-meta">Next
-                  <div class="pt-2 pb-5 flex-reverse">
-                    <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
-                    <span>[C语言学习笔记]第五周整理</span>
-                  </div>
-                </a>
               
             </div>
           </div>
@@ -743,8 +733,8 @@ int main()
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e8%af%be%e5%90%8e%e4%b9%a0%e9%a2%98">
-												 课后习题
+						 					<a class="nav-link" href="#%e8%af%be%e5%a0%82%e7%bb%83%e4%b9%a0">
+												 课堂练习
 											</a>
 										</li>
 						 
@@ -918,83 +908,13 @@ int main()
 								
 									<ul class="nav">
 								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#%e4%b9%a0%e9%a2%98%e8%af%be%e4%bd%9c%e4%b8%9a">
-												 习题课作业
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
 									<ul class="nav">
 								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e7%ac%ac%e4%b8%80%e9%a2%98-1">
-												 第一题
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#%e7%ac%ac%e4%ba%8c%e9%a2%98-1">
-												 第二题
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#%e7%ac%ac%e4%b8%89%e9%a2%98-1">
-												 第三题
+						 					<a class="nav-link" href="#%e7%ac%ac%e4%b8%83%e9%a2%98">
+												 第七题
 											</a>
 										</li>
 						 
@@ -1019,8 +939,164 @@ int main()
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e7%ac%ac%e5%9b%9b%e9%a2%98-1">
-												 第四题
+						 					<a class="nav-link" href="#%e7%ac%ac%e5%85%ab%e9%a2%98">
+												 第八题
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e7%ac%ac%e4%b9%9d%e9%a2%98">
+												 第九题
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e7%ac%ac%e5%8d%81%e9%a2%98">
+												 第十题
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e7%ac%ac%e5%8d%81%e4%b8%80%e9%a2%98">
+												 第十一题
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e7%ac%ac%e5%8d%81%e4%ba%8c%e9%a2%98">
+												 第十二题
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e7%ac%ac%e5%8d%81%e4%b8%89%e9%a2%98">
+												 第十三题
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e7%ac%ac%e5%8d%81%e5%9b%9b%e9%a2%98">
+												 第十四题
 											</a>
 										</li>
 						 

@@ -14,7 +14,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://wanzaiwharf.github.io/blog/" />
 
-<meta property="og:updated_time" content="2019-09-23T21:34:15+08:00" />
+<meta property="og:updated_time" content="2019-10-19T11:07:50+08:00" />
 
 
   <title>
@@ -371,12 +371,51 @@
           
               <div class="post-wrapper white-bg post-card">
   
-  <a href="https://wanzaiwharf.github.io/blog/2019-09/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%AC%AC%E5%9B%9B%E5%91%A8%E6%95%B4%E7%90%86/">
+  <a href="https://wanzaiwharf.github.io/blog/2019-10/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%83%E5%91%A8%E6%95%B4%E7%90%86/">
     <div class="post-header text-center">
-      <div class="px-4 post-heading">[C语言学习笔记——第四周整理]</div>
+      <div class="px-4 post-heading">[C语言学习笔记]第七周整理</div>
       <ul class="post-meta li-x mt-1">
         
-          <li>Sep 23, 2019</li>
+          <li>Oct 19, 2019</li>
+        
+    
+        
+          <li class="middot"></li>
+          <li>2 minutes read</li>
+        
+      </ul>
+    </div>
+    
+
+    
+      课堂练习 第一题 ex_13.c 将字符串s[]中的与c变量相同字符删除 #include&lt;stdio.h&gt; void squeeze(char s[],int c); int main() { char str[]=&#34;Hello world!\n&#34;; int c=&#39;o&#39;; squeeze(str,c); printf(&#34;%s&#34;,str); return 0; } void squeeze(char s[],int c) { int i,j; for(i=j=0;s[i]=&#39;\0&#39;;i&#43;&#43;) if(s[i]!=c) s[j&#43;&#43;]=s[i]; s[j]=&#39;\0&#39;; } 第二题 ex_14.c strcat函数 #include&lt;stdio.h&gt; #define MAXLEN 100 int main() { void mystrcat(char[],char[]); char s[MAXLEN]=&#34;Hello&#34;; char t[]=&#34; world!&#34;; mystrcat(s,t); printf(&#34;s=%s\n&#34;,s); return 0; } void mystrcat(char s[],char t[]) { int i,j; i=j=0; while(s[i]!=&#39;\0&#39;) i&#43;&#43;; while((s[i&#43;&#43;]=t[j&#43;&#43;])!=&#39;\0&#39;) ; } 第三题 ex_15.c getbits（int x, int p, int n) #include&lt;stdio.h&gt; unsigned getbits(unsigned, int, int); int main() { int b,a=0x56674; b=getbits(a,5,2); printf(&#34;b=%x\n&#34;,b); return 0; } unsigned getbits(unsigned x,int p,int n) { return(x&gt;&gt;(p&#43;1-n))&amp;~(~0 &lt;&lt;n); } 第四题 ex_16.c 统计变量x中1的个数 #include&lt;stdio.h&gt; unsigned bitcount(unsigned); int main() { int a=0x56674,b; b=bitcount(a); printf(&#34;b=%d\n&#34;,b); return 0; } unsigned bitcount(unsigned x) { int b; for(b=0;x!=0;x&gt;&gt;=1) if(x&amp;01) &#43;&#43;b; return b; } 第五题 ex_17.c 输出自然数，每10个换一......
+    
+  </a>
+
+  
+  
+  <div class="post-meta li-x mt-2 div-x">
+    <div>
+      
+      
+    </div>
+   
+    <div>
+      
+    </div>
+  </div>
+
+</div>
+
+          
+              <div class="post-wrapper white-bg post-card">
+  
+  <a href="https://wanzaiwharf.github.io/blog/2019-10/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%94%E5%91%A8%E4%B9%A0%E9%A2%98%E8%AF%BE/">
+    <div class="post-header text-center">
+      <div class="px-4 post-heading">[C语言学习笔记]第五周习题课</div>
+      <ul class="post-meta li-x mt-1">
+        
+          <li>Oct 19, 2019</li>
         
     
         
@@ -388,7 +427,7 @@
     
 
     
-      第三周放中秋假停课 课后习题 第一题 输入一串字符，并进行回显 #include&lt;stdio.h&gt; int main() { int c; c=getchar();//getchar 读取键盘输入并将读取到的值放入变量中 while(c!=EOF) { putchar(c);//循环中的结束条件EOF表示ctrl&#43;d或回车 c=getchar(); } return 0; } 第二题 统计键盘上键入的字符的个数 #include&lt;stdio.h&gt; int main() { long nc; int c; nc=0; c=getchar(); while(c!=EOF) { &#43;&#43;nc;//表示nc加1 c=getchar(); } printf(&#34;\nthe totoal number:%ld\n&#34;,nc); return 0; } 第三题 统计键盘输入时输入中行的个数 #include&lt;stdio.h&gt; int main() { int nl,c; nl=0; while((c=getchar())!=EOF) { if(c==&#39;\n&#39;)//&#39;a&#39;:表示1个常量，常量值为a字......
+      第一题 编写程序输出所有水仙花数 水仙花数：一个三位数，各位数字的立方和等于该数本身 #include&lt;stdio.h&gt; int main() { int hun, ten, ind, n; printf(&#34;全部水仙花数如下:\n&#34;); for( n=100; n&lt;1000; n&#43;&#43; ) /*的取值范围*/ { hun = n / 100; ten = (n-hun*100) / 10; ind = n % 10; if(n == hun*hun*hun &#43; ten*ten*ten &#43; ind*ind*ind) /*各位上的立方和是否与原数n相等*/ printf(&#34;%d &#34;, n); } printf(&#34;\n&#34;); return 0; } 第二题 编写程序输出1000以内的完数 完数：除自身以外所有因子之和等于自身的数 #include&lt;stdio.h&gt; int main() { int j,s,n; for(n=2;n&lt;1000;n&#43;&#43;) { for( j=1; j&lt;n; j&#43;&#43; ) { if(n%j == 0)......
     
   </a>
 
@@ -410,12 +449,12 @@
           
               <div class="post-wrapper white-bg post-card">
   
-  <a href="https://wanzaiwharf.github.io/blog/2019-09/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%8C%E5%91%A8%E6%95%B4%E7%90%86/">
+  <a href="https://wanzaiwharf.github.io/blog/2019-10/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%94%E5%91%A8%E6%95%B4%E7%90%86/">
     <div class="post-header text-center">
-      <div class="px-4 post-heading">[C语言学习笔记——第二周整理]</div>
+      <div class="px-4 post-heading">[C语言学习笔记]第五周整理</div>
       <ul class="post-meta li-x mt-1">
         
-          <li>Sep 23, 2019</li>
+          <li>Oct 19, 2019</li>
         
     
         
@@ -427,46 +466,7 @@
     
 
     
-      课后作业 第一题 计算1到5的乘积，即5的阶乘 #include&lt;stdio.h&gt; int main() { int product; product=1*2*3*4*5; printf(&#34;The product from 1 to 5 is %d&#34;,product); return 0; } 第二题 手动输入n，然后计算从1依次相乘到n的乘积 #include&lt;stdio.h&gt; int main() { int prod(int n); int product; int n; scanf(&#34;%d&#34;,&amp;n); product=prod(n); printf(&#34;The product from 1 to %d is %d\n&#34;,n,product); return 0; } int prod(int n) { int p,i; p=1; i=1; do{ p=p*i; i=i&#43;1; }while(i&lt;=n);//do while循环 return p; } 第三题 在第二题的基础上更改程序，使其能计算从1到n的奇数依次相乘的乘积 #include&lt;stdio.h&gt; int main() { int prod(int n); int product; int n; scanf(&#34;%d&#34;,&amp;n); product=prod(n); printf(&#34;The product from 1 to %d is %d\n&#34;,n,product); return 0; } int prod(int n) { int p,i; p=1; i=1; do{ p=p*i; i=i&#43;2;//改一个加2即可，主要需要熟练......
-    
-  </a>
-
-  
-  
-  <div class="post-meta li-x mt-2 div-x">
-    <div>
-      
-      
-    </div>
-   
-    <div>
-      
-    </div>
-  </div>
-
-</div>
-
-          
-              <div class="post-wrapper white-bg post-card">
-  
-  <a href="https://wanzaiwharf.github.io/blog/2019-09/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%B8%80%E5%91%A8%E6%95%B4%E7%90%86/">
-    <div class="post-header text-center">
-      <div class="px-4 post-heading">[C语言学习笔记——第一周整理]</div>
-      <ul class="post-meta li-x mt-1">
-        
-          <li>Sep 23, 2019</li>
-        
-    
-        
-          <li class="middot"></li>
-          <li>One minute read</li>
-        
-      </ul>
-    </div>
-    
-
-    
-      课后作业 第一题 所有初学者第一次遇见的程序，print “hello world!” #include&lt;stdio.h&gt; int main() { printf(&#34;hello world\n&#34;); return 0; } 第二题 给定数值的加法运算 #include&lt;stdio.h&gt; int main() { int a,b,sum;//int 变量定义，int定义一个整型 a=123; b=456; sum=a&#43;b; printf(&#34;Sum is %d\n&#34;,sum); return 0; } 第三题 键盘输入两个整数，比大小 #include&lt;stdio.h&gt; int a,b,c; int main() { int max(int x,int y); scanf(&#34;%d%d&#34;,&amp;b,&amp;a);//scanf 扫描输入，%d 对应int定义的整型 c=max(a,b); printf(&#34;max=%d\n&#34;,c); return 0; } int max(int x,int y)//在主函数外定义一个函数 { int z; if(x&gt;y) z=x; else z=y; return z;//返回值的问题 } 习题课作业 安装虚拟机（本人自用manjaro发行版系统实体机），完成课上例......
+      09.27 课堂练习 例1 #include&lt;stdio.h&gt; #define MAXLINE 1000 int mygetline(char line[],int maxline); void copy(char to[],char from[]); int main() { int len,max; char longest[MAXLINE]; char line[MAXLINE]; max=0; while((len=mygetline(line,MAXLINE))&gt;0) if(len&gt;max) { max=len; copy(longest,line); } if(max&gt;0) printf(&#34;\nThe longest is: %s\n length=%d\n&#34;,longest,max); return 0; } int mygetline(char s[],int lim) { int c,i; for(i=0;i&lt;lim-1 &amp;&amp; (c=getchar())!=EOF &amp;&amp; c!=&#39;\n&#39;;&#43;&#43;i) s[i]=c; if(c==&#39;\n&#39;) { s[i]=c; &#43;&#43;i; } s[i]=&#39;\0&#39;; return i; } void copy(char to[],char from[]) { int i; i=0; while((to[i]=from[i])!=&#39;\0&#39;) &#43;&#43;i; } 09.29 课堂练习 例3 统计一个字符串的字符个数 #include&lt;stdio.h&gt; #define MAXLENGTH 1000 int mystrlen(char s[]); int main() { char mystring[MAXLENGTH]; int len; scanf(&#34;%s&#34;,mystring); len=mystrlen(mystring); printf(&#34;Len=%d\n&#34;,len); return 0; } int mystrlen(char s[]) { int i; i=0; while(s[i]!=&#39;\0&#39;) &#43;&#43;i; return i; } 例4 枚举常量的值 #include&lt;stdio.h&gt; enum escapes { BELL=&#39;\a&#39;, BACKSPACE=&#39;\b&#39;, TAB=&#39;\t&#39;, NEWLINE=&#39;\n&#39;, VTAB=&#39;\v&#39;, RETURN=&#39;\r&#39;, }; int main() { enum escapes be,ba,ta,ne,vt,re; be=BELL; ba=BACKSPACE; ta=TAB; ne=NEWLINE; vt=VTAB; re=RETURN; printf(&#34;be=%d\n&#34;,be); printf(&#34;ba=%d\n&#34;,ba); printf(&#34;ta=%d\n&#34;,ta); printf(&#34;ne=%d\n&#34;,ne); printf(&#34;vt=%d\n&#34;,vt); printf(&#34;re=%d\n&#34;,re); return 0; } 例5 测量除法、求余操作 #include&lt;stdio.h&gt; int main() { int a,b; a=5; b=2; printf(&#34;a=%d b=%d a/b=%d a%%b=%d\n&#34;,a,b,a/b,a%b); a=-5; b=2; printf(&#34;a=%d b=%d a/b=%d a%%b=%d\n&#34;,a,b,a/b,a%b); return 0; }......
     
   </a>
 
